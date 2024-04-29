@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel=""shortcut icon" href="iconsamikl.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> لوحة مفاتيح جديدة</title>
+  <style>
+    .keyboard-key {
+      display: inline-block;
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    body {
+      background: rgb(2, 0, 36);
+      background: linear-gradient(131deg, rgba(2, 0, 36, 1) 0%, rgba(9, 121, 45, 1) 19%, rgba(0, 212, 255, 1) 25%);
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <div id="keyboard">
+    <div class="keyboard-key" onclick="insertText('ء')">ء</div>
+    <div class="keyboard-key" onclick="insertText('آ')">آ</div>
+    <div class="keyboard-key" onclick="insertText('أ')">أ</div>
+    <div class="keyboard-key" onclick="insertText('ؤ')">ؤ</div>
+    <div class="keyboard-key" onclick="insertText('إ')">إ</div>
+    <div class="keyboard-key" onclick="insertText('ئ')">ئ</div>
+    <div class="keyboard-key" onclick="insertText('ا')">ا</div>
+    <div class="keyboard-key" onclick="insertText('ب')">ب</div>
+    <div class="keyboard-key" onclick="insertText('ت')">ت</div>
+    <div class="keyboard-key" onclick="insertText('ث')">ث</div>
+    <div class="keyboard-key" onclick="insertText('ج')">ج</div>
+    <div class="keyboard-key" onclick="insertText('ح')">ح</div>
+    <div class="keyboard-key" onclick="insertText('خ')">خ</div>
+    <div class="keyboard-key" onclick="insertText('د')">د</div>
+    <div class="keyboard-key" onclick="insertText('ذ')">ذ</div>
+    <div class="keyboard-key" onclick="insertText('ر')">ر</div>
+    <div class="keyboard-key" onclick="insertText('ز')">ز</div>
+    <div class="keyboard-key" onclick="insertText('س')">س</div>
+    <div class="keyboard-key" onclick="insertText('ش')">ش</div>
+    <div class="keyboard-key" onclick="insertText('ص')">ص</div>
+    <div class="keyboard-key" onclick="insertText('ض')">ض</div>
+    <div class="keyboard-key" onclick="insertText('ط')">ط</div>
+    <div class="keyboard-key" onclick="insertText('ظ')">ظ</div>
+    <div class="keyboard-key" onclick="insertText('ع')">ع</div>
+    <div class="keyboard-key" onclick="insertText('غ')">غ</div>
+    <div class="keyboard-key" onclick="insertText('ف')">ف</div>
+    <div class="keyboard-key" onclick="insertText('ق')">ق</div>
+    <div class="keyboard-key" onclick="insertText('ك')">ك</div>
+    <div class="keyboard-key" onclick="insertText('ل')">ل</div>
+    <div class="keyboard-key" onclick="insertText('م')">م</div>
+    <div class="keyboard-key" onclick="insertText('ن')">ن</div>
+    <div class="keyboard-key" onclick="insertText('ه')">ه</div>
+    <div class="keyboard-key" onclick="insertText('و')">و</div>
+    <div class="keyboard-key" onclick="insertText('ي')">ي</div>
+    <div class="keyboard-key" onclick="insertText('ى')">ى</div>
+    <div class="keyboard-key" onclick="insertText('٠')">٠</div>
+    <div class="keyboard-key" onclick="insertText('١')">١</div>
+    <div class="keyboard-key" onclick="insertText('٢')">٢</div>
+    <div class="keyboard-key" onclick="insertText('٣')">٣</div>
+    <div class="keyboard-key" onclick="insertText('٤')">٤</div>
+    <div class="keyboard-key" onclick="insertText('٥')">٥</div>
+    <div class="keyboard-key" onclick="insertText('٦')">٦</div>
+    <div class="keyboard-key" onclick="insertText('٧')">٧</div>
+    <div class="keyboard-key" onclick="insertText('٨')">٨</div>
+    <div class="keyboard-key" onclick="insertText('٩')">٩</div>
+    <div class="keyboard-key" onclick="insertText(' ')">مسافة</div>
+  </div>
+
+  <button onclick="deleteCharacter()">حذف</button>
+
+  <button onclick="resetTextarea()">إعادة الكتابة</button>
+
+  <button onclick="deleteSelection()">حذف الكل</button>
+
+  <textarea id="output" rows="4" cols="50" readonly></textarea>
+
+  <div id="footer">
+    <p>تم إنشاء بواسطة سامي القلعي</p>
+    <a href="https://www.facebook.com/sami.kalai.sk/">
+      <img src="facebook.png" alt="fb" tutorial"style="width:42px;height:42px;border:0;">
+    </a>
+  </div>
+
+  <script>
+    function insertText(character) {
+      document.getElementById("output").value += character;
+    }
+
+    function deleteCharacter() {
+      var text = document.getElementById("output").value;
+      document.getElementById("output").value = text.slice(0, -1);
+    }
+
+    function resetTextarea() {
+      document.getElementById("output").value = "";
+    }
+
+    function deleteSelection() {
+      document.getElementById("output").value = "";
+    }
+  </script>
+
+</body>
+
+</html>
